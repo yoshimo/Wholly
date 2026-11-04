@@ -4260,7 +4260,7 @@ end
 				-- Now since the Blizzard UI has probably created a quest frame before I get
 				-- the chance to hook the function I need to go through all the quest frames
 				-- and hook them too.
-				if not Grail.battleForAzeroth then
+				if not Grail.battleForAzeroth and not Grail.existsForever then
 					local titles = QuestMapFrame.QuestsFrame.Contents.Titles
 					for i = 1, #(titles) do
 						titles[i]:HookScript("OnEnter", Wholly._OnEnterBlizzardQuestButton)
